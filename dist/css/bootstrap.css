@@ -6724,4 +6724,8 @@ button.close {
     display: none !important;
   }
 }
+.toTopButton {
+  float: right;
+  text-decoration: none;
+}
 /*# sourceMappingURL=bootstrap.css.map */
