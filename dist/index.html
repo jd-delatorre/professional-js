@@ -44,12 +44,12 @@
 
         <code>
         var message = "some string"; <br/>
-        console.log(typeof (message)); //object
+        console.log(typeof (message)); //object  <br>
         </code>
 
         <hr>
         
-        <h4>String Character Literals</h4>
+        <h3>String Character Literals</h3>
         <ul>
           <li>\n - new line</li>
           <li>\t - tab</li>
@@ -63,14 +63,15 @@
         
         <hr>
 
-        <h4>Converting values to String</h4>
-        <code>var num =10; <br/>
-              console.log(toString(num));
+        <h3>Converting values to String</h3>
+        <code>
+              var num =10; <br/>
+              console.log(toString(num));  <br>
         </code>
 
         <hr>
 
-        <h4>Object properties and methods</h4>
+        <h3>Object properties and methods</h3>
 
         <ul>
           <li>Constructor - function that was used to create the object</li>
@@ -83,8 +84,191 @@
         </ul>
 
         <a href="#top" class="toTopButton">Top</a>
+        <div class="clearfix"></div>
+
+        <hr>
 
         <h4>Arguments are values or valuables that are passed in functions</h4>
+
+        <a href="#top" class="toTopButton">Top</a>
+        <div class="clearfix"></div>
+
+        <hr>
+
+        <h2>Objects</h2>
+
+        <h3>Creating Objects</h3>
+
+        <code>
+          var person = new Object(); <br/>
+          person.name = "Nicholas"; <br/>
+          person.age = 29;  <br><br>
+        </code>
+
+        <h3>Or to use the Object Literal Notation</h3>
+
+        <code>
+          var person = { <br/>
+            name: "Nicholas", <br/>
+            age: 29 <br/>
+          }  <br>
+        </code>
+
+        <a href="#top" class="toTopButton">Top</a>
+        <div class="clearfix"></div>
+
+        <hr>
+
+        <h3>Calling Objects</h3>
+
+        <code>
+          alert( person["name"] ); <br>
+          alert( person.name );  <br><br>
+        </code>
+
+        <p>It's better to use bracket notation as you can substitute variables or use properties with spaces</p>
+
+        <a href="#top" class="toTopButton">Top</a>
+        <div class="clearfix"></div>
+
+        <hr>
+
+        <h2>Array Types!</h2>
+
+        <h3>Creating Arrays</h3>
+
+        <p>Array Constructor Method</p>
+
+        <code>
+          var colors = new Array();  <br><br>
+        </code>
+
+        <p>Array Literal Notation</p>
+
+        <code>
+          var colors = [];  <br><br>
+        </code>
+
+        <a href="#top" class="toTopButton">Top</a>
+        <div class="clearfix"></div>
+
+        <hr>
+
+        <h3>To Get and Set Arrays, use BRACKETS</h3>
+        
+        <code>
+          var colors = ["red", "blue", "yellow"]; <br/>
+          colors2[2] = "black";  <br><br>
+        </code>
+
+        <h3>'join' Method</h3>
+
+        <code>
+          var colors = ["red", "green", "blue"]; <br/>
+          alert( colors.join(", ") ); //red, green, blue  <br/>
+          alert( colors.join("||") );  //red || green || blue  <br><br>
+        </code>
+
+        <p>'join' method combines elements in array and inserts specified character to separate them. </p>
+
+        <hr>
+        
+        <a href="#top" class="toTopButton">Top</a>
+        <div class="clearfix"></div>
+
+        <h3>Array Stack Methods</h3>
+
+        <p>Arrays have the ability to be converted to stack arrays that allow them to behave like other data structures.  They are referred to as <em>L-I-F-O</em>, "Last In First Out".</p>
+
+        <p>The insertion is called a <b>push</b> and the removal is called a <b>pop</b>.  Push() methods accept arguments and adds them to the end of the array and returns the array's length.  The pop() method removes the last item in the array, updates the length, and returns the item.</p>
+
+        <code>
+          var colors = new Array(); <br/>
+          var count = colors.push( "red", "yellow" ); <br/>
+          alert( count );  //2  <br/><br/>
+
+          var item = colors.pop(); <br>
+          alert( item ); //yellow  <br><br>
+
+        </code>
+
+        <hr>
+        
+        <a href="#top" class="toTopButton">Top</a>
+        <div class="clearfix"></div>
+
+        <h3>Queue Methods</h3>
+
+        <p>Just like stacks only allow for L-I-F-O, queues restrict access to <em>F-I-F-O</em>, First In First Out.  This is achieved with the shift() method, which removes the first item in the array, returns it, and decreases the length by one. </p>
+
+        <code>
+          var colors = new Array();  <br>
+          var count = colors.push( "yellow", "black" ); <br>
+          var item = colors.shift();  <br>
+          alert(item); //yellow  <br><br>
+        </code>
+
+        <p>The opposite is the <em>unshift()</em> method which just adds item to the front of the array.</p>
+
+        <hr>
+        
+        <a href="#top" class="toTopButton">Top</a>
+        <div class="clearfix"></div>
+
+        <h3>Reordering Arrays</h3>
+
+        <p>Two methods deal with the reordering of elements already in an array: reverse() and sort(). </p>
+
+        <code>
+          var values = [ 1, 2, 3, 4, 5 ];  <br>
+          values.reverse();  <br>
+          alert( values );  //5, 4, 3, 2, 1  <br><br>
+        </code>
+
+        <p>When it comes to sort(), this will take the string value, not the numeric value.  If you want it to sort from lowest to greatest by numerical value, you need to pass in the comparison argument.</p>
+
+        <code>
+          var values = [ 0, 1, 5, 10, 15 ];  <br>
+          values.sort();  <br>
+          console.log(values) // 0, 1, 10, 15, 5  <br><br>
+
+          function compare(value1, value2){  <br>
+            if(value1 < value2){    <br>
+              return -1;    <br>
+            }else if( value2 < value1 ){    <br>
+              return 1;   <br>
+            }else{    <br>
+              return 0;   <br>
+            }   <br>
+          }   <br><br>
+
+          values.sort(compare);  <br>
+          console.log(values);  //0, 1, 5, 10, 15  <br><br>
+
+        </code>
+
+        <p>To return the values in descending order, just change the return value for the first two conditionals to their opposite.</p>
+        
+        <hr>
+        
+        <a href="#top" class="toTopButton">Top</a>
+        <div class="clearfix"></div>
+
+        <h3>Manipulating Arrays</h3>
+
+        <p>The next method we will learn is called the concat() method, which copies the array, appends any items to the array that are passed as the argument, and returns the newly created array.</p>
+
+        <code>
+          var colors = [ "red", "blue", "yellow" ];  <br>
+          var colors2 = colors.concat("blacK", "green"); <br><br>
+
+          alert(colors2);  //red, blue, yellow, black, green  <br><br>
+
+        </code>
+
+        <br/>
+        <br/>
+
       </div>
     </div>
   </div>
@@ -94,6 +278,10 @@
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <!-- <script src="js/bootstrap.min.js"></script> -->
+
+    <script>
+      
+    </script>
   </body>
 </html>
 
