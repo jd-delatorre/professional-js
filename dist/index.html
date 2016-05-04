@@ -266,6 +266,42 @@
 
         </code>
 
+        <p>The next method to look at is the slice() method.  The slice() method accepts one or two arguments and returns an array from elements already in the array.  The arguments it accepts are the starting and ending points, not including the ending point.  This does not effect the original array.</p>
+
+        <code>
+          var colors = ["red", "blue", "green", "yellow", "purple"];  <br>
+          var colors2 = colors.slice(1);  <br>
+          var colors3 = colors.slice(1,4);  <br><br>
+
+          alert( colors2 );  //blue, green, yellow, purple  <br>
+          alert( colors3 );  //blue, green, yellow  <br><br>
+        </code>
+
+        <h4>Splice() Method</h4>
+
+        <p>One of the most powerful array manipulation methods is splice() which allows you to inject items to the middle of an array. There are three distinct ways to use it:</p>
+
+        <ul>
+          <li><b>Deletion</b> - Any number of items in an array can be removed just by passing in the starting and ending point of what you want to remove.  splice(0,2) deletes the first two items.</li>
+          <li><b>Insertion</b> - Items can be inserted into an array by passing in three arguments: starting position, number of items to delete, and the item to insert.  splice(2, 0, "red", "green")</li>
+          <li><b>Replacement</b> - Items can be inserted at a specific position while simultaneously deleting items from the array.  See above.  </li>
+        </ul>
+
+        <hr>
+        
+        <a href="#top" class="toTopButton">Top</a>
+        <div class="clearfix"></div>
+
+        <h3>Locaation Methods</h3>
+
+        <p>There are two methods to find the location of an item in an array: <b>indexOf()</b> and <b>lastIndexOf()</b>.  Both accept two arguments.  The item to look for and an optional starting point in the array.  indexOf() starts at the beginning and lastIndexOf() starts at the end.  Both return the position of the item in the array or <b>-1 if not found</b>.</p>
+
+
+        <hr>
+        
+        <a href="#top" class="toTopButton">Top</a>
+        <div class="clearfix"></div>
+
         <br/>
         <br/>
 
