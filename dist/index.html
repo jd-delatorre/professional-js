@@ -47,6 +47,8 @@
         console.log(typeof (message)); //object  <br>
         </code>
 
+        <button class="btn-primary" onclick="getTypeOf();">Try Me!</button>
+
         <hr>
         
         <h3>String Character Literals</h3>
@@ -66,8 +68,10 @@
         <h3>Converting values to String</h3>
         <code>
               var num =10; <br/>
-              console.log(toString(num));  <br>
+              console.log( num.toString() );  <br>
         </code>
+
+        <button class="btn-primary" onclick="getToString();">Try Me!</button>
 
         <hr>
 
@@ -105,14 +109,18 @@
           person.age = 29;  <br><br>
         </code>
 
+        <button class="btn-primary" onclick="newObjects();">Try Me!</button>
+
         <h3>Or to use the Object Literal Notation</h3>
 
         <code>
           var person = { <br/>
             name: "Nicholas", <br/>
             age: 29 <br/>
-          }  <br>
+          }  <br><br>
         </code>
+
+        <button class="btn-primary" onclick="newObjectsLiteral();">Try Me!</button>
 
         <a href="#top" class="toTopButton">Top</a>
         <div class="clearfix"></div>
@@ -125,6 +133,8 @@
           alert( person["name"] ); <br>
           alert( person.name );  <br><br>
         </code>
+
+        <button class="btn-primary" onclick="newObjectsLiteral();">Try Me!</button>
 
         <p>It's better to use bracket notation as you can substitute variables or use properties with spaces</p>
 
@@ -143,12 +153,14 @@
           var colors = new Array();  <br><br>
         </code>
 
+
+
         <p>Array Literal Notation</p>
 
         <code>
           var colors = [];  <br><br>
         </code>
-
+        
         <a href="#top" class="toTopButton">Top</a>
         <div class="clearfix"></div>
 
@@ -161,6 +173,8 @@
           colors2[2] = "black";  <br><br>
         </code>
 
+        <button class="btn-primary" onclick="newArrayExample();">Try Me!</button>
+
         <h3>'join' Method</h3>
 
         <code>
@@ -168,6 +182,8 @@
           alert( colors.join(", ") ); //red, green, blue  <br/>
           alert( colors.join("||") );  //red || green || blue  <br><br>
         </code>
+
+        <button class="btn-primary" onclick="joinArrayExample();">Try Me!</button>
 
         <p>'join' method combines elements in array and inserts specified character to separate them. </p>
 
@@ -192,6 +208,8 @@
 
         </code>
 
+        <button class="btn-primary" onclick="pushPopArrayExample();">Try Me!</button>
+
         <hr>
         
         <a href="#top" class="toTopButton">Top</a>
@@ -207,6 +225,8 @@
           var item = colors.shift();  <br>
           alert(item); //yellow  <br><br>
         </code>
+
+        <button class="btn-primary" onclick="queueArrayExample();">Try Me!</button>
 
         <p>The opposite is the <em>unshift()</em> method which just adds item to the front of the array.</p>
 
@@ -224,6 +244,8 @@
           values.reverse();  <br>
           alert( values );  //5, 4, 3, 2, 1  <br><br>
         </code>
+
+        <button class="btn-primary" onclick="reverseArrayExample();">Try Me!</button>
 
         <p>When it comes to sort(), this will take the string value, not the numeric value.  If you want it to sort from lowest to greatest by numerical value, you need to pass in the comparison argument.</p>
 
@@ -247,6 +269,8 @@
 
         </code>
 
+        <button class="btn-primary" onclick="sortCompareArrayExample(); ">Try Me!</button>
+
         <p>To return the values in descending order, just change the return value for the first two conditionals to their opposite.</p>
         
         <hr>
@@ -266,6 +290,8 @@
 
         </code>
 
+        <button class="btn-primary" onclick="concatArrayExample();">Try Me!</button>
+
         <p>The next method to look at is the slice() method.  The slice() method accepts one or two arguments and returns an array from elements already in the array.  The arguments it accepts are the starting and ending points, not including the ending point.  This does not effect the original array.</p>
 
         <code>
@@ -276,6 +302,8 @@
           alert( colors2 );  //blue, green, yellow, purple  <br>
           alert( colors3 );  //blue, green, yellow  <br><br>
         </code>
+
+        <button class="btn-primary" onclick="sliceArrayExample();">Try Me!</button>
 
         <h4>Splice() Method</h4>
 
@@ -292,7 +320,7 @@
         <a href="#top" class="toTopButton">Top</a>
         <div class="clearfix"></div>
 
-        <h3>Locaation Methods</h3>
+        <h3>Location Methods</h3>
 
         <p>There are two methods to find the location of an item in an array: <b>indexOf()</b> and <b>lastIndexOf()</b>.  Both accept two arguments.  The item to look for and an optional starting point in the array.  indexOf() starts at the beginning and lastIndexOf() starts at the end.  Both return the position of the item in the array or <b>-1 if not found</b>.</p>
 
@@ -301,6 +329,25 @@
         
         <a href="#top" class="toTopButton">Top</a>
         <div class="clearfix"></div>
+
+        <h3>Iterative Methods</h3>
+
+        <p>There are five methods for iterating through arrays.  Each method accepts two arguments: a function to run on each item, and an optional scope object on which to run the function.  The function passed into this method will receive three arguments: the array item value, the position, and the array object.</p>
+
+        <ul>
+          <li><b>every()</b> - runs function on every item in array and returns true if function is true for EVERY item.</li>
+          <li><b>filter()</b> - runs function on every item in array and returns array of items for which case is true.</li>
+          <li><b>forEach()</b> - runs function on every item in array and has NO return.</li>
+          <li><b>map()</b> - runs function on every item in array and returns result of each function call in an array.</li>
+          <li><b>some()</b> - runs function on every item in array and returns true if function is true for at least one item.</li>
+        </ul>
+
+        <hr>
+        
+        <a href="#top" class="toTopButton">Top</a>
+        <div class="clearfix"></div>
+
+        <h1>Page 119-120</h1>
 
         <br/>
         <br/>
@@ -315,9 +362,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <!-- <script src="js/bootstrap.min.js"></script> -->
 
-    <script>
-      
-    </script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
 
